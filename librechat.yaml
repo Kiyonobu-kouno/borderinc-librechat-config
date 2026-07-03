@@ -18,6 +18,11 @@ endpoints:
       modelDisplayLabel: "OpenRouter"
       dropParams: ["stop"]
 
+interface:
+  codeExecution: true
+  htmlArtifacts: true
+  reactArtifacts: true
+
 fileStrategies:
   avatar: "local"
   image: "local"
