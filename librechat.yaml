@@ -11,6 +11,7 @@ endpoints:
           - "anthropic/claude-sonnet-4.6"
           - "google/gemini-2.5-pro"
           - "openai/gpt-5"
+          - "google/gemma-4-31b-it:free"
         fetch: false
       titleConvo: true
       titleModel: "current_model"
