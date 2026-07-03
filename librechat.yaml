@@ -1,10 +1,11 @@
-version: 1.2.8
+version: "1.1.5"
+
 cache: true
 
 endpoints:
   custom:
     - name: "OpenRouter"
-      apiKey: "${OPENAI_API_KEY}"
+      apiKey: "${OPENROUTER_KEY}" # さっき設定した正しい環境変数を参照
       baseURL: "https://openrouter.ai/api/v1"
       models:
         default:
@@ -12,12 +13,12 @@ endpoints:
           - "google/gemini-2.5-pro"
           - "openai/gpt-5"
           - "google/gemma-4-31b-it:free"
-        fetch: false
+        fetch: true # これでOpenRouterの全最新モデルを裏側から自動で引きずり出すお
       titleConvo: true
-      titleModel: "current_model"
       modelDisplayLabel: "OpenRouter"
+      dropParams: ["stop"] # OpenRouterの互換性エラーを未然に防ぐ天才の美学お[cite: 1]
 
 fileStrategies:
-  avatar: "local"
-  image: "local"
-  document: "s3"
+  avatar: "local"      # 期限切れで表示崩れを起こすものはローカル保存（軍団長の判断通りお！）[cite: 1]
+  image: "local"       # 画面キャプチャもローカルのディスクで割れずに動くお[cite: 1]
+  document: "s3"       # クライアントのクソ仕様書・PDFだけをR2へ安全に退避[cite: 1]
