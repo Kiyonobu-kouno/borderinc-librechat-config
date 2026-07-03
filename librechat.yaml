@@ -5,7 +5,7 @@ cache: true
 endpoints:
   custom:
     - name: "OpenRouter"
-      apiKey: "${OPENROUTER_API_KEY}" # RailwayのVariablesに入れる環境変数名だお
+      apiKey: "${OPENROUTER_KEY}" # RailwayのVariablesに入れる環境変数名だお
       baseURL: "https://openrouter.ai/api/v1"
       models:
         # 軍団長がメインで使いたい精鋭モデルだけをフロントに露出させる
