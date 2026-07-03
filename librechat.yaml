@@ -1,20 +1,21 @@
 version: 1.2.8
 cache: true
 
-# ── 外部エンドポイントのハック（OpenRouter一本槍） ──
 endpoints:
   custom:
     - name: "OpenRouter"
-      apiKey: "${OPENROUTER_KEY}" # RailwayのVariablesに入れる環境変数名だお
+      apiKey: "${OPENROUTER_KEY}"
       baseURL: "https://openrouter.ai/api/v1"
       models:
-        # 軍団長がメインで使いたい精鋭モデルだけをフロントに露出させる
-        default: ["anthropic/claude-3.5-sonnet", "openai/gpt-4o-mini", "google/gemini-2.5-pro"]
-        fetch: true # これをtrueにすると、OpenRouterの300以上のモデルを自動で引きずり出すお
+        default:
+          - "anthropic/claude-sonnet-4.6"
+          - "google/gemini-2.5-pro"
+          - "openai/gpt-5"
+        fetch: false
       titleConvo: true
+      titleModel: "current_model"
       modelDisplayLabel: "OpenRouter"
 
-# ── インフラの引き算（Fable5推奨のR2部分だけ残す） ──
 fileStrategies:
   avatar: "local"
   image: "local"
