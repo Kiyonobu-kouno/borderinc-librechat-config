@@ -10,3 +10,9 @@ fileStrategies:
   avatar: "local"
   image: "local"
   document: "s3"
+
+webSearch:
+  searchProvider: tavily
+  scraperProvider: tavily
+  tavilyApiKey: "${TAVILY_API_KEY}"
+  rerankerType: "none"
