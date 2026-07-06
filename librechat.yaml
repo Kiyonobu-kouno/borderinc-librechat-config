@@ -21,4 +21,20 @@ webSearch:
   tavilyApiKey: "${TAVILY_API_KEY}"
   rerankerType: "none"
 
-memory: disabled: true
+memory:
+  disabled: false
+  personalize: true
+  tokenLimit: 2000
+  messageWindowSize: 5
+  validKeys:
+    - 'project_context'
+    - 'user_preferences'
+  agent:
+    provider: 'anthropic'
+    model: 'claude-3-5-haiku-20241022'
+    instructions: >
+      Store only objective facts about the BORDER project
+      (tech stack, domain configuration, tool decisions) and
+      Kiyonobu's technical preferences. Do not store tone,
+      personality directives, or conversational style notes
+      belonging to any specific agent persona.
