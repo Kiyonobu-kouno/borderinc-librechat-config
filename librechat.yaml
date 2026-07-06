@@ -32,6 +32,7 @@ memory:
   agent:
     provider: 'anthropic'
     model: 'claude-3-5-haiku-20241022'
+    enabled: true
     instructions: >
       Store only objective facts about the BORDER project
       (tech stack, domain configuration, tool decisions) and
