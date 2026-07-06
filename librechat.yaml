@@ -6,12 +6,6 @@ interface:
   htmlArtifacts: true
   reactArtifacts: true
 
-webSearch:
-  searchProvider: "tavily"
-  tavilyApiKey: "${TAVILY_API_KEY}"
-  scraperProvider: "tavily"
-  rerankerType: "none"
-
 fileStrategies:
   avatar: "local"
   image: "local"
