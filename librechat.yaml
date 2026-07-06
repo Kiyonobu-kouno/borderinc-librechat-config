@@ -1,15 +1,6 @@
 version: "1.1.5"
-
 cache: true
 
-# ── OpenRouterを完全パージし、公式ファシリティへ直通させる隙間 ──
-endpoints:
-  anthropic:
-    apiKey: "${ANTHROPIC_API_KEY}"
-  google:
-    apiKey: "${GEMINI_API_KEY}"
-
-# ── 画面右側でJSXがバキバキに起動する最強の皮膚（Artifacts） ──
 interface:
   codeExecution: true
   htmlArtifacts: true
