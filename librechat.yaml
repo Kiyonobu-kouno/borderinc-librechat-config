@@ -4,6 +4,23 @@ cache: true
 endpoints:
   agents:
     recursionLimit: 25
+
+interface:
+  codeExecution: true
+  htmlArtifacts: true
+  reactArtifacts: true
+
+fileStrategies:
+  avatar: "s3"
+  image: "s3"
+  document: "s3"
+
+webSearch:
+  searchProvider: tavily
+  scraperProvider: tavily
+  tavilyApiKey: "${TAVILY_API_KEY}"
+  rerankerType: "none"
+
 memory:
   disabled: false
   personalize: true
@@ -21,19 +38,3 @@ memory:
       Kiyonobu's technical preferences. Do not store tone,
       personality directives, or conversational style notes
       belonging to any specific agent persona.
-
-interface:
-  codeExecution: true
-  htmlArtifacts: true
-  reactArtifacts: true
-
-fileStrategies:
-  avatar: "s3"
-  image: "s3"
-  document: "s3"
-
-webSearch:
-  searchProvider: tavily
-  scraperProvider: tavily
-  tavilyApiKey: "${TAVILY_API_KEY}"
-  rerankerType: "none"
