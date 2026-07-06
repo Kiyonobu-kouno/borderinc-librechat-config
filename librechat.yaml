@@ -7,8 +7,8 @@ interface:
   reactArtifacts: true
 
 fileStrategies:
-  avatar: "local"
-  image: "local"
+  avatar: "s3"
+  image: "s3"
   document: "s3"
 
 webSearch:
