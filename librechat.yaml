@@ -28,9 +28,10 @@ memory:
     model: 'claude-haiku-4-5-20251001'
     enabled: true
     instructions: >
-      Store only Kiyonobu's personal preferences, working style,
-      and communication preferences. Do not store project-specific
-      technical details (tech stack, infrastructure, storage config,
-      tool decisions, cost figures) as these become outdated quickly.
-      Do not store tone, personality directives, or conversational
-      style notes belonging to any specific agent persona.
+      Store only the user's personal preferences, working philosophy,
+      career background, and communication style. Do not store
+      project-specific technical details (infrastructure, tech stack,
+      tool decisions, configuration values, cost figures) as these
+      become outdated quickly. Do not store tone, personality
+      directives, or conversational style notes belonging to any
+      agent persona rather than the user themselves.
