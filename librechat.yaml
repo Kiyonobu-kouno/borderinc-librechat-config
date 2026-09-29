@@ -5,6 +5,15 @@ endpoints:
   agents:
     recursionLimit: 25
 
+fileConfig:
+  endpoints:
+    default:
+      fileLimit: 30
+      fileSizeLimit: 50
+      totalSizeLimit: 100
+    google:
+      fileLimit: 30
+
 interface:
   codeExecution: true
   htmlArtifacts: true
