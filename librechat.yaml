@@ -8,9 +8,9 @@ endpoints:
 fileConfig:
   endpoints:
     default:
-      fileLimit: 30       # 1回あたり最大30ファイルまで許可
-      fileSizeLimit: 50   # 1ファイルあたり50MBまで
-      totalSizeLimit: 100 # 合計100MBまで
+      fileLimit: 30
+      fileSizeLimit: 50
+      totalSizeLimit: 100
     google:
       fileLimit: 30
 
